@@ -1,11 +1,10 @@
-version: '3.8'
-
 services:
   db:
-    image: postgres:16.3
+    image: bitnami/postgresql:17.5.0
     container_name: db
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - ./pg_data:${POSTGRESQL_VOLUME_DIR}
+      - ./backups:/backups
     env_file:
       - .env
     ports:
@@ -14,7 +13,7 @@ services:
       - postgres-database-network
 
   pgadmin:
-    image: dpage/pgadmin4:8.8
+    image: dpage/pgadmin4:9.8.0
     container_name: pgadmin
     env_file:
       - .env
