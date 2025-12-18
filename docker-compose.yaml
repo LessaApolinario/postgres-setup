@@ -1,9 +1,9 @@
 services:
   db:
-    image: bitnami/postgresql:17.5.0
+    image: postgres:17-alpine
     container_name: db
     volumes:
-      - ./pg_data:${POSTGRESQL_VOLUME_DIR}
+      - ./data/pg:/var/lib/postgresql/data
       - ./backups:/backups
     env_file:
       - .env

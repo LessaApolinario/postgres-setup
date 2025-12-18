@@ -1,3 +1,6 @@
-pg_data
+# folders
+data/
+backups/
+
+# files
 .env
-backups
