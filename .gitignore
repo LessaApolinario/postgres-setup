@@ -1,5 +1,8 @@
 # folders
 .docker
+!.docker/
+!.docker/initdb/
+!.docker/initdb/*.sql
 
 # files
 .env

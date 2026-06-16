@@ -5,6 +5,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - .docker/backups:/backups
+      - ./.docker/initdb:/docker-entrypoint-initdb.d:ro
     env_file:
       - .env
     ports:
