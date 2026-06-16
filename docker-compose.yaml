@@ -4,7 +4,7 @@ services:
     container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./backups:/backups
+      - .docker/backups:/backups
     env_file:
       - .env
     ports:

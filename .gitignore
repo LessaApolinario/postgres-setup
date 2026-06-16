@@ -1,6 +1,5 @@
 # folders
-data/
-backups/
+.docker
 
 # files
 .env
